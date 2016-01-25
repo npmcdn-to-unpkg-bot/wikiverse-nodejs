@@ -1,6 +1,8 @@
 #Configs
 config
 
+#Compiled assets (starting with _)
+public/javascripts/_*
 
 # Logs
 logs
