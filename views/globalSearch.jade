@@ -1,0 +1,14 @@
+#global-search.search
+  button.close(type='button') ×
+  .search-container.center.buffer-top-large
+    #searchInput.row
+      input(type='search', value='', placeholder='')
+    #searchResults.row
+      h3 wikiverse found content from following sources: 
+      .resultsCount
+        button#Wikipedia.btn.btn-primary.source(source='wikis', fn='buildListResults', type='submit')
+        button#Flickr.btn.btn-primary.source(source='flickrs', fn='buildFotoSearchResults', type='submit')
+        button#Instagram.btn.btn-primary.source(source='instagrams', fn='buildFotoSearchResults', type='submit')  
+        button#Youtube.btn.btn-primary.source(source='youtubes', fn='buildYoutubeSearchResults', type='submit')  
+        button#Twitter.btn.btn-primary.source(source='twitters', fn='buildTwitterSearchResults', type='submit')  
+        button#Soundcloud.btn.btn-primary.source(source='soundclouds', fn='buildListResults', type='submit')  

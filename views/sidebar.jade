@@ -1,0 +1,38 @@
+nav#sidebar.cbp-spmenu.wv_sidebar.cbp-spmenu-vertical.cbp-spmenu-left.fixed
+  .search-ui
+    input#search-keyword.form-control(type='text', placeholder='Search for...')
+    #sourceType
+      select.selectpicker.sourceType.show-menu-arrow(data-style='btn btn-default', data-width='100%')
+        // <option ="">try another source..</option>
+        option(selected='')  Wikipedia
+        option           Youtube
+        option           Twitter
+        option           Flickr
+        option           Instagram
+        option           Soundcloud
+    #instagramType.sourceParams(type='Instagram')
+      select#instagramSearchType.selectpicker(name='input', data-style='btn btn-default', data-width='100%')
+        option(value='hashtag') #hashtag
+        option(value='username') @username
+        option(value='coordinates') coordinates
+    #flickrType.sourceParams(type='Flickr')
+      select#flickrSearchType.selectpicker(name='flickrType', data-style='btn btn-default', data-width='100%')
+        option(value='textQuery') keyword
+        option(value='userQuery') username
+        option(value='geoQuery') coordinates
+    #flickrSort.sourceParams(type='Flickr')
+      select#flickrSortType.selectpicker(name='flickrSort', data-style='btn btn-default', data-width='100%')
+        option(value='relevance') sort by relevance
+        option(value='interestingness-desc') sort by interestingness
+    #twitterType.sourceParams(type='Twitter')
+      select#twitterSearchType.selectpicker(name='twitterSearchType', data-style='btn btn-default', data-width='100%')
+        option(value='popular') get popular results
+        option(value='recent') get recent results
+        option(value='mixed') get mixed results
+    #youtubeType.sourceParams(type='Youtube')
+      select#youtubeSortType.selectpicker(name='youtubeSort', data-style='btn btn-default', data-width='100%')
+        option(value='relevance') sort by relevance
+        option(value='date') sort by date
+        option(value='viewCount') sort by view count
+        option(value='rating') sort by rating
+  .results
