@@ -1,7 +1,23 @@
 doctype html
 html
 	head
-		title=_id 
-		link(rel='stylesheet', href='/stylesheets/style.css')
+		title=board.title
+		link(rel='stylesheet', href='/stylesheets/bundle.css')
+		link(rel='stylesheet', href='//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css')
+		script(src='/javascripts/jQuery.min.js')
+		script(src='/javascripts/sigma.js')
+		script(src='/javascripts/sigma-plugins.js')
+		script(src='//npmcdn.com/expect/umd/expect.min.js')
+		script(src='//wzrd.in/standalone/deep-freeze@latest')
+		script(src='/javascripts/_vendor.min.js')
 	body
-
+		include ./header.jade
+		include ./toggleSidebar.jade
+		include ./bottomSidebar.jade
+		include ./sidebar.jade
+		include ./globalSearch.jade
+		include ./main.jade
+		script(src='/javascripts/_wv.min.js')
+		script.
+			//WIKIVERSE.init();
+			//WIKIVERSE.buildBoard(board);
