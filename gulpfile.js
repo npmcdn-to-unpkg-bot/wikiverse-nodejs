@@ -15,10 +15,10 @@ var uglify = require('gulp-uglify');
 // var browserify = require('browserify');
 // var watchify = require('watchify');
 
-
-gulp.task('scripts', function() {
+//3rd party scripts minification
+gulp.task('vendor', function() {
   return gulp.src('public/javascripts/vendor/*.js')
-    .pipe(concat('vendor.min.js'))
+    .pipe(concat('_vendor.min.js'))
     //.pipe(gulp.dest('public/javascripts'))
     //.pipe(rename({suffix: '.min'}))
     .pipe(uglify())
